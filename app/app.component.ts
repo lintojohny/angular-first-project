@@ -11,9 +11,7 @@ import {Component} from 'angular2/core';
     	</ul>
     	<div [ngSwitch]= "viewMode"> 
     		<template [ngSwitchWhen]="'map'" ngSwitchDefault> Map View Content </template>
-    		<template [ngSwitchWhen]="'list'" ngSwitchDefault> list View Content </template>
 
-    	</div>
     `
 }) 
 export class AppComponent { 

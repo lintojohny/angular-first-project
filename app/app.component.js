@@ -25,7 +25,7 @@ System.register(['angular2/core'], function(exports_1, context_1) {
                 AppComponent = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        template: "   \n    \t<ul class= \"nav nav-pills\">\n    \t\t<li [class.active]=\"viewMode == 'map'\"> <a (click)=\"viewMode= 'map'\"> Map View </a></li> \n    \t\t<li [class.active]=\"viewMode == 'list'\"> <a (click)=\"viewMode= 'list'\"> list View </a></li> \n    \t</ul>\n    \t<div [ngSwitch]= \"viewMode\"> \n    \t\t<template [ngSwitchWhen]=\"'map'\" ngSwitchDefault> Map View Content </template>\n    \t\t<template [ngSwitchWhen]=\"'list'\" ngSwitchDefault> list View Content </template>\n\n    \t</div>\n    "
+                        template: "   \n    \t<ul class= \"nav nav-pills\">\n    \t\t<li [class.active]=\"viewMode == 'map'\"> <a (click)=\"viewMode= 'map'\"> Map View </a></li> \n    \t\t<li [class.active]=\"viewMode == 'list'\"> <a (click)=\"viewMode= 'list'\"> list View </a></li> \n    \t</ul>\n    \t<div [ngSwitch]= \"viewMode\"> \n    \t\t<template [ngSwitchWhen]=\"'map'\" ngSwitchDefault> Map View Content </template>\n\n    "
                     }), 
                     __metadata('design:paramtypes', [])
                 ], AppComponent);

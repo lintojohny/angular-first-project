@@ -11,35 +11,28 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var FavoriteComponent;
+    var SummaryPipe;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            FavoriteComponent = (function () {
-                function FavoriteComponent() {
-                    this.isFavorite = false;
+            SummaryPipe = (function () {
+                function SummaryPipe() {
                 }
-                FavoriteComponent.prototype.onClick = function () {
-                    this.isFavorite = !this.isFavorite;
+                SummaryPipe.prototype.transform = function (value, args) {
+                    if (value)
+                        return value.substring(0, 50) + "...";
                 };
-                __decorate([
-                    core_1.Input(), 
-                    __metadata('design:type', Object)
-                ], FavoriteComponent.prototype, "isFavorite", void 0);
-                FavoriteComponent = __decorate([
-                    core_1.Component({
-                        selector: 'favorite',
-                        template: " \n\t<i \n\tclass= \"glyphicon\"\n\t[ngClass]=\"{\n\t\t'glyphicon-star-empty': !isFavorite,\n\t\t'glyphicon-star': isFavorite\n\t}\"\n\t(click)=\"onClick()\">\n\t</i>\n\t"
-                    }), 
+                SummaryPipe = __decorate([
+                    core_1.Pipe({ name: 'summary' }), 
                     __metadata('design:paramtypes', [])
-                ], FavoriteComponent);
-                return FavoriteComponent;
+                ], SummaryPipe);
+                return SummaryPipe;
             }());
-            exports_1("FavoriteComponent", FavoriteComponent);
+            exports_1("SummaryPipe", SummaryPipe);
         }
     }
 });
-//# sourceMappingURL=favorite.component.js.map
+//# sourceMappingURL=summary.pipe.js.map
