@@ -11,28 +11,27 @@ System.register(['angular2/core'], function(exports_1, context_1) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
     var core_1;
-    var AppComponent;
+    var BootstrapPanel;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             }],
         execute: function() {
-            AppComponent = (function () {
-                function AppComponent() {
+            BootstrapPanel = (function () {
+                function BootstrapPanel() {
                 }
-                AppComponent = __decorate([
+                BootstrapPanel = __decorate([
                     core_1.Component({
                         selector: 'my-app',
-                        directives: '[BootstrapPanel]',
-                        template: " <bs-panel > \n    <div class=\"heading\"> my heading </div>\n    <div class= \"body\"> This is the body! </div>\n     </bs-panel>  \n    \t\n    "
+                        template: " <div class= \"panel panel-default\">\n    \t\t\t\t<div class= \"panel-heading\">\n    \t\t\t\t  <ng-content select= \".heading\">\n    \t\t\t\t  <ng-content>\n    \t\t\t\t </div>\n    \t\t\t\t<div class= \"panel-body\"> \n    \t\t\t\t  <ng-content select= \".body\">\n\n    \t\t\t\t  </ng-content>\n\n    \t\t\t\t</div>\n    \t\t\t</div>  \n    \t\n    "
                     }), 
                     __metadata('design:paramtypes', [])
-                ], AppComponent);
-                return AppComponent;
+                ], BootstrapPanel);
+                return BootstrapPanel;
             }());
-            exports_1("AppComponent", AppComponent);
+            exports_1("BootstrapPanel", BootstrapPanel);
         }
     }
 });
-//# sourceMappingURL=app.component.js.map
+//# sourceMappingURL=bootstrap.panel.component.js.map

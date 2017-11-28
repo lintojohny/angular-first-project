@@ -1,20 +1,16 @@
 import {Component} from 'angular2/core';
-
-
+import{BootstrapPanel} from './bootstrap.panel.component';
 
 @Component({
     selector: 'my-app',
-    template: `   
-    	<ul class= "nav nav-pills">
-    		<li [class.active]="viewMode == 'map'"> <a (click)="viewMode= 'map'"> Map View </a></li> 
-    		<li [class.active]="viewMode == 'list'"> <a (click)="viewMode= 'list'"> list View </a></li> 
-    	</ul>
-    	<div [ngSwitch]= "viewMode"> 
-    		<template [ngSwitchWhen]="'map'" ngSwitchDefault> Map View Content </template>
-
+    directives: '[BootstrapPanel]',
+    template:  ` <bs-panel > 
+    <div class="heading"> my heading </div>
+    <div class= "body"> This is the body! </div>
+     </bs-panel>  
+    	
     `
 }) 
 export class AppComponent { 
-	viewMode = 'map';
 
 }
